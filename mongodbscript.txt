@@ -1,0 +1,9 @@
+flights.find({})-to find all scheduled flights
+
+const flight = flights.find({id:req.params.id})-to find flight by flightid
+
+
+db.flights.insertOne({flight_id:'BC789',dept_from:'bengaluru',dept_to:'chennai',date:'02-06-2021',price:1900,time:'18:00'} )-to insert flight in db
+
+db.flights.insertOne({flight_id:'BM785',dept_from:'bengaluru',dept_to:'mumbai',date:'03-06-2021',price:3890,time:'20:00'} )
+ db.flights.insertOne({flight_id:'BM786',dept_from:'bengaluru',dept_to:'mumbai',date:'02-06-2021',price:3890,time:'17:00'} )

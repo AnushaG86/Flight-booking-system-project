@@ -1,0 +1,125 @@
+<style>
+    
+    
+    button{
+      background-color:rgb(124, 124, 219); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+  #zoom {
+
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#zoom:hover {
+  transform: scale(1.5); /* (150% zoom)*/
+}
+  </style>
+ 
+  
+  
+  
+  <div class="wrapper" >
+    <div class="view" style="background-image: url('../../assets/image/flight.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 50vh;">
+    <div class="searchform">
+        <button (click)="onSubmit()">SEARCH FOR FLIGHTS HERE</button><br><br>
+     </div>
+  
+
+  </div>
+  <br><br>
+  <div id="header" style=" padding: 3%;">
+    <h3 style="font-style: italic;">Most Visited Places with best Offers</h3>
+  </div>
+  <div class="fh5co-listing">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img  id="zoom" src="../../assets/image/meghalaya.jfif"  class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">meghalaya</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img id="zoom" src="../../assets/image/goa.jpg"   class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">Goa</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img id="zoom" src="../../assets/image/jaipur.jfif"   class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">Jaipur</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <!-- END 3 row -->
+
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img id="zoom" src="../../assets/image/kanyakumari.jfif" class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">KanyaKumari</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img id="zoom" src="../../assets/image/kashmir.jfif"   class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">Kashmir</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+          <a class="fh5co-listing-item" href="specialflight">
+            <img id="zoom" src="../../assets/image/manali.jpg" class="img-responsive">
+            <div class="fh5co-listing-copy">
+              <h2 style="text-align: center;">Manali</h2>
+              <span class="icon">
+                <i class="icon-chevron-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+        <!-- END 3 row -->
+
+
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+  

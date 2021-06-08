@@ -1,0 +1,23 @@
+<div style="margin-top: 5%;">
+    <table class="table table-bordered table table-dark" style="min-width: 100%; border-radius: 2%;border-style: solid;">
+    <thead>
+      <tr>
+        <th scope="col">dept_from</th>
+        <th scope="col">dept_to</th>
+        <th scope="col">date</th>
+        <th scope="col">price</th>
+        <th class="text-center" scope="col">Ticket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Books of book; let Flight of Flights">
+        <td style="text-align: center;">{{Flight.dept_from}}</td>
+        <td style="text-align: center;">{{Flight.dept_to}}</td>
+        <td style="text-align: center;">{{Flight.date}}</td>
+        <td style="text-align: center;">{{Books.price}}</td>
+        <td class="text-center" style="text-align: center;">
+          <button class="btn btn-sm btn-primary" (click)="ticket()">ticket</button>
+    </tr>
+    </tbody>
+  </table>
+  </div>

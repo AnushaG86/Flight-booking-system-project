@@ -1,0 +1,7 @@
+html { 
+    background: url(http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

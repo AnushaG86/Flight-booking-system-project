@@ -1,0 +1,60 @@
+<style>
+    table {
+      border:none;
+      border-collapse: collapse;
+  }
+  
+  table td {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+  }
+  
+  table td:first-child {
+      border-left: none;
+  }
+  
+  table td:last-child {
+      border-right: none;
+  }
+  .wrapper{
+      min-height: 50vh;
+    }
+  </style>
+  <div class="container">
+    <div class="view" style="background-color: rgb(192, 188, 188); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2 class="h2" style="text-align: center;">Flight List</h2>
+      </div><br><br>
+     
+      <div class="table-responsive">
+        <table class="table table-bordered table table-dark" style="min-width: 100%; border-radius: 2%;border-style: solid;">
+          <thead>
+            <tr>
+              <th scope="col">FlightID</th>
+              <th scope="col">dept_from</th>
+              <th scope="col">dept_to</th>
+              <th scope="col">date</th>
+              <th scope="col">price</th>
+              <th scope="col">time</th>
+              <th class="text-center" scope="col">BOOK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Flight of Flights">
+              <td style="text-align: center;">{{Flight.flight_id}}</td>
+              <td style="text-align: center;">{{Flight.dept_from}}</td>
+              <td style="text-align: center;">{{Flight.dept_to}}</td>
+              <td style="text-align: center;">{{Flight.date}}</td>
+              <td style="text-align: center;">{{Flight.price}}</td>
+              <td style="text-align: center;">{{Flight.time}}</td>
+              <td class="text-center" style="text-align: center;">
+                <button class="btn btn-sm btn-primary"  (click)="onclick(Flight.flight_id)" >BOOK</button>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="wrapper" >
+    
+        <br><br>
+        </div>
+    </div>

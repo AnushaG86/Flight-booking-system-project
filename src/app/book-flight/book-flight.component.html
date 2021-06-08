@@ -1,0 +1,101 @@
+<style>
+    .wrapper{
+      min-height: 50vh;
+    }
+    .view{
+      background-repeat: no-repeat; background-size:80%;
+       background-position: center ;
+    
+
+    }
+      .searchform{
+        text-align: center;
+        margin-top: 10%;
+        border-style: solid;
+        border-color: black;
+        display: inline-table;
+        border-radius: 10%;
+        margin-left: 40%;
+        min-width: 30%;
+        backdrop-filter: blur(5px);
+        
+    }
+    table {
+      margin-top: 5%;
+      border:none;
+      border-collapse: collapse;
+  }
+  
+  table td {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+  }
+  
+  table td:first-child {
+      border-left: none;
+  }
+  
+  table td:last-child {
+      border-right: none;
+  }
+    
+
+</style>
+    
+
+<div class="wrapper" style="background-image: url('https://st3.depositphotos.com/13905956/18411/v/1600/depositphotos_184111994-stock-illustration-airplane-path-in-dotted-line.jpg');" >
+  <div class="table-responsive">
+    <table class="table table-bordered table table-dark" style="min-width: 100%; border-radius: 2%;border-style: solid;">
+      <thead>
+        <tr>
+          <th scope="col">FlightID</th>
+          <th scope="col">dept_from</th>
+          <th scope="col">dept_to</th>
+          <th scope="col">date</th>
+          <th scope="col">price</th>
+          <th scope="col">time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Flight of Flights">
+          <td style="text-align: center;">{{Flight.flight_id}}</td>
+          <td style="text-align: center;">{{Flight.dept_from}}</td>
+          <td style="text-align: center;">{{Flight.dept_to}}</td>
+          <td style="text-align: center;">{{Flight.date}}</td>
+          <td style="text-align: center;">{{Flight.price}}</td>
+          <td style="text-align: center;">{{Flight.time}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="view" style="border-color: burlywood;">
+    <div class="searchform">
+        <h3>Fill up</h3><br><br>
+        <form  [formGroup]="bookForm" (ngSubmit)="onSubmit(bookForm.value)">
+          <div class="form-group">
+            <label>Flight_id</label>
+            <input class="form-control" type="text" formControlName="flight_id" [ngModel]="id" required>
+          </div><br>
+          <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" formControlName="name" required>
+          </div><br>
+   
+          <div class="form-group">
+            <label>Phone No</label>
+            <input class="form-control" type="number" formControlName="Phoneno" required>
+          </div><br>
+          
+          <div class="form-group">
+            <label>Amount</label>
+            <input class="form-control" type="number" formControlName="amount"   required>
+          </div><br>
+   
+          <div class="form-group">
+            <button class="btn btn-primary btn-block "  type="submit">confirm Booking</button><br><br>
+          </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    

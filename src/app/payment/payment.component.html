@@ -1,0 +1,73 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .col-md-4{
+      text-align: center;
+      margin-top: 20%;
+      border-style: solid;
+      margin-left: 3%;
+      border-color:black;
+      border-radius: 5%;
+    }
+    h3{
+      text-align: center;
+    }
+    img{
+      float: right;
+      min-height: 50vh;
+      min-width: 5%;
+      margin-top: 2%;
+      margin-right: 20%;
+
+    }
+</style>
+<div >
+  
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ruMSMzoytB9j4Pomt7aZ2B1S1roBdqugIg&usqp=CAU">
+</div>
+<div class="cntainer mt-5" style="text-align: center;">
+  <table class="table table-bordered table table-dark" style="min-width: 100%; border-radius: 2%;border-style: solid;">
+    <thead>
+      <tr>
+        <th scope="col">FlightID</th>
+        <th scope="col">dept_from</th>
+        <th scope="col">dept_to</th>
+        <th scope="col">date</th>
+        <th scope="col">price</th>
+        <th scope="col">time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Flight of Flights">
+        <td style="text-align: center;">{{Flight.flight_id}}</td>
+        <td style="text-align: center;">{{Flight.dept_from}}</td>
+        <td style="text-align: center;">{{Flight.dept_to}}</td>
+        <td style="text-align: center;">{{Flight.date}}</td>
+        <td style="text-align: center;">{{Flight.price}}</td>
+        <td style="text-align: center;">{{Flight.time}}</td>
+      </tr>
+    </tbody>
+  </table><br><br>
+
+  <table class="table table-bordered table table-dark" style="min-width: 100%; border-radius: 2%;border-style: solid;">
+    <thead>
+      <tr>
+        <th scope="col">FlightID</th>
+        <th scope="col">name</th>
+        <th scope="col">Phoneno</th>
+        <th scope="col">price</th>
+        <th class="text-center" scope="col">BOOK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Books of Book">
+        <td style="text-align: center;">{{Books.flight_id}}</td>
+        <td style="text-align: center;">{{Books.name}}</td>
+        <td style="text-align: center;">{{Books.Phoneno}}</td>
+        <td style="text-align: center;">{{Books.amount}}</td>
+        <td class="text-center" style="text-align: center;">
+          <button class="btn btn-sm btn-primary" (click)="Pay(Books.amount)"  >Pay</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    
